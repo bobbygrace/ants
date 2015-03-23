@@ -26,9 +26,9 @@ client and no server component.
 - Visit [localhost:8080](http://localhost:8080) to view your site.
 
 This is just a template, so don’t push to this repo. To get rid of the git
-history, run `rm ./.git`, then do `git init` to start anew. Be sure to update
-package.json, `/src/templates/index.html`, and so forth, with your app’s
-information.
+history, run `rm -rf ./.git`, then do `git init` to start anew. Be sure to
+update package.json, `/src/templates/index.html`, and so forth, with your
+app’s information.
 
 
 ## Serving
