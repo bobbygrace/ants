@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+browserify -t coffeeify -t uglifyify ./src/scripts/entries/app.coffee -o ./public/js/app.js
