@@ -44,7 +44,7 @@ app.coffee, be sure to set the environment variable on your server with
 
 I don’t expect this to be anything new for a full-time front-end developer; it
 uses a lot of common tools. It just saves me a lot of time and keystrokes when
-starting a new project of this kind. I also hopes it’s instructive for newer
+starting a new project of this kind. I also hope it’s instructive for newer
 front-end developers.
 
 You should also check out [yeoman](http://yeoman.io/) and
