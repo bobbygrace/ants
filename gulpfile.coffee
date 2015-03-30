@@ -44,7 +44,7 @@ gulp.task 'templates', ->
 
 
 gulp.task 'watch', ->
-  gulp.watch '/src/styles/', ['styles']
+  gulp.watch './src/styles/*', ['styles']
   gulp.watch templatesSrc, ['templates']
 
 
