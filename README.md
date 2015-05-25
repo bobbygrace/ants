@@ -9,7 +9,7 @@ client and no server component.
 
 - [Gulp](http://gulpjs.com/)
 - [st](https://github.com/isaacs/st)
-- [CoffeScript](http://coffeescript.org/)
+- [CoffeeScript](http://coffeescript.org/)
 - [Browserify](http://browserify.org/)
 - [LESS](http://lesscss.org/)
   - [normalize.css](http://necolas.github.io/normalize.css/)
