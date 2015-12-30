@@ -3,7 +3,7 @@ path = require 'path'
 gutil = require 'gulp-util'
 concat = require 'gulp-concat'
 less = require 'gulp-less'
-minifyCSS = require 'gulp-minify-css'
+cssnano = require 'gulp-cssnano'
 rename = require 'gulp-rename'
 minifyHTML = require 'gulp-minify-html'
 LessPluginAutoPrefix = require('less-plugin-autoprefix')
@@ -28,7 +28,7 @@ gulp.task 'styles', ->
       gutil.log(err)
       this.emit('end')
     .pipe gulp.dest('./public/css')
-    .pipe minifyCSS()
+    .pipe cssnano()
     .pipe rename('app.min.css')
     .pipe gulp.dest('./public/css')
 

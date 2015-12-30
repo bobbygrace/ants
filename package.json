@@ -1,6 +1,6 @@
 {
   "name": "ants",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ants is a template for static, single-page websites.",
   "scripts": {
     "gulp": "tools/gulp",
@@ -10,22 +10,22 @@
   "author": "Bobby Grace",
   "license": "MIT",
   "dependencies": {
-    "coffee-script": "~1.9.1",
-    "st": "~0.5.3",
-    "config": "~1.12.0",
-    "nodemon": "~1.3.7",
-    "express": "~4.12.3",
-    "gulp": "~3.8.11",
-    "gulp-util": "~3.0.4",
-    "gulp-rename": "~1.2.0",
-    "gulp-minify-css": "~1.0.0",
-    "gulp-minify-html": "~1.0.1",
-    "gulp-concat": "~2.5.2",
+    "browserify": "~12.0.1",
+    "coffee-script": "~1.10.0",
+    "coffeeify": "~2.0.1",
+    "config": "~1.17.1",
+    "express": "~4.13.3",
+    "gulp": "~3.9.0",
+    "gulp-concat": "~2.6.0",
+    "gulp-cssnano": "^2.0.0",
     "gulp-less": "~3.0.2",
-    "less-plugin-autoprefix": "~1.4.0",
-    "browserify": "~9.0.3",
-    "watchify": "~2.5.0",
-    "coffeeify": "~1.0.0",
-    "uglifyify": "~3.0.1"
+    "gulp-minify-html": "~1.0.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-util": "~3.0.4",
+    "less-plugin-autoprefix": "~1.5.1",
+    "nodemon": "~1.8.1",
+    "st": "~1.1.0",
+    "uglifyify": "~3.0.1",
+    "watchify": "~3.6.1"
   }
 }
