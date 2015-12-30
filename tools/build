@@ -1,3 +1,10 @@
 #!/usr/bin/env bash
 
-./node_modules/browserify/bin/cmd.js -t coffeeify -t uglifyify ./src/scripts/entries/app.coffee -o ./public/js/app.js
+mkdir ./public/js/;
+touch ./public/js/app.js;
+
+./node_modules/gulp/bin/gulp.js &
+./node_modules/browserify/bin/cmd.js \
+  -t [coffeeify --no-sourcemaps] \
+  -g [uglifyify --no-sourcemaps --compress --screw-ie8 --beautify=false] \
+  ./src/scripts/entries/app.coffee -o ./public/js/app.js;

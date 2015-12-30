@@ -4,7 +4,6 @@
   "description": "Ants is a template for static, single-page websites.",
   "scripts": {
     "gulp": "tools/gulp",
-    "watch": "tools/watch",
     "build": "tools/build",
     "dev": "tools/dev"
   },

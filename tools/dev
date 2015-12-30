@@ -1,3 +1,9 @@
 #!/usr/bin/env bash
 
-./node_modules/nodemon/bin/nodemon.js app.coffee
+mkdir ./public/js/;
+touch ./public/js/app.js;
+
+./node_modules/gulp/bin/gulp.js dev &
+./node_modules/watchify/bin/cmd.js \
+  -t [coffeeify] \
+  ./src/scripts/entries/app.coffee -o ./public/js/app.js --debug -v;

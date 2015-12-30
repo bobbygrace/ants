@@ -49,4 +49,5 @@ gulp.task 'watch', ->
   gulp.watch templatesSrc, ['templates']
 
 
-gulp.task 'default', ['styles', 'templates', 'watch']
+gulp.task 'dev', ['styles', 'templates', 'watch']
+gulp.task 'default', ['styles', 'templates']
