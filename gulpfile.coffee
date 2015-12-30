@@ -15,6 +15,8 @@ autoprefix = new LessPluginAutoPrefix
     'last 3 Chrome versions'
     'last 3 Firefox versions'
     'last 3 Safari versions'
+    'last 15 Edge versions'
+    'Explorer >= 10'
   ]
 
 gulp.task 'styles', ->
