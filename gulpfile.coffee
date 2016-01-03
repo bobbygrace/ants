@@ -6,7 +6,7 @@ rename = require 'gulp-rename'
 less = require 'gulp-less'
 cssnano = require 'gulp-cssnano'
 LessPluginAutoPrefix = require('less-plugin-autoprefix')
-minifyHTML = require 'gulp-minify-html'
+htmlmin = require 'gulp-htmlmin'
 imagemin = require 'gulp-imagemin'
 pngquant = require 'imagemin-pngquant'
 
@@ -43,11 +43,17 @@ gulp.task 'styles', ->
 templatesSrc = './src/templates/*.html'
 
 gulp.task 'templates', ->
-  options = { empty: true }
+  options =
+    removeComments: true
+    collapseWhitespace: true
+    removeAttributeQuotes: true
+    removeEmptyAttributes: true
+    minifyJS: true
+    minifyCSS: true
 
   gulp
     .src templatesSrc
-    .pipe minifyHTML(options)
+    .pipe htmlmin(options)
     .pipe gulp.dest('./public')
 
 
