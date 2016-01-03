@@ -7,6 +7,7 @@ client and no server component.
 
 ## The Tools
 
+- [Node](https://nodejs.org/) (v6.9.1)
 - [Gulp](http://gulpjs.com/)
 - [st](https://github.com/isaacs/st)
 - [CoffeeScript](http://coffeescript.org/)
