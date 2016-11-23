@@ -34,7 +34,8 @@ gulp.task 'styles', ->
       this.emit('end')
     .pipe gulp.dest('./public/css')
     .pipe cssnano()
-    .pipe rename('app.min.css')
+    .pipe rename (path) ->
+      path.basename += '.min'
     .pipe gulp.dest('./public/css')
 
 
