@@ -1,11 +1,11 @@
 gulp = require 'gulp'
 path = require 'path'
-gutil = require 'gulp-util'
+log = require 'fancy-log'
 rename = require 'gulp-rename'
 
 less = require 'gulp-less'
 cssnano = require 'gulp-cssnano'
-LessPluginAutoPrefix = require('less-plugin-autoprefix')
+LessPluginAutoPrefix = require 'less-plugin-autoprefix'
 htmlmin = require 'gulp-htmlmin'
 imagemin = require 'gulp-imagemin'
 pngquant = require 'imagemin-pngquant'
@@ -30,7 +30,7 @@ gulp.task 'styles', ->
       paths: [path.join(__dirname, 'src/styles')]
       plugins: [autoprefix]
     .on 'error', (err) ->
-      gutil.log(err)
+      log(err)
       this.emit('end')
     .pipe gulp.dest('./public/css')
     .pipe cssnano()
@@ -84,10 +84,10 @@ gulp.task 'images', ->
 # Watch
 
 gulp.task 'watch', ->
-  gulp.watch './src/styles/*', ['styles']
-  gulp.watch templatesSrc, ['templates']
-  gulp.watch imageSrc, ['images']
+  gulp.watch './src/styles/*', gulp.series(['styles'])
+  gulp.watch templatesSrc, gulp.series(['templates'])
+  gulp.watch imageSrc, gulp.series(['images'])
 
 
-gulp.task 'dev', ['styles', 'templates', 'images', 'watch']
-gulp.task 'default', ['styles', 'templates', 'images']
+gulp.task 'dev', gulp.series(['styles', 'templates', 'images', 'watch'])
+gulp.task 'default', gulp.series(['styles', 'templates', 'images'])
